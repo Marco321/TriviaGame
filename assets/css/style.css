@@ -1,0 +1,25 @@
+body {
+    background-color: cadetblue;
+}
+
+#StartGame {
+    
+}
+
+.CenterQuestions {
+    margin: auto;
+    width: 700px;
+    margin-bottom: 10px;
+}
+
+.HiddenQuestions {
+    display: none;
+}
+
+#HiddenResults{
+    display: none;
+}
+
+#HiddenButton{
+    display: none;
+}

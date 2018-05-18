@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game</title>
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/javascript.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="jumbotron jumbotron-fluid col-10">
+                <div class="container">
+                    <h1 class="display-4 text-center">Trivia Game</h1>
+                    <p class="lead"><li>At the start of the game you will be presented with 5 multiple choice questions.</li></p>
+                    <p class="lead"><li>You will have until the timer runs out to answer all of the questions.</li></p>
+                    <p class="lead text-center">Press the start button to begin the game.</p>
+                    <div class="card text-center" style="width: 18rem; margin: auto;">
+                        <div class="card-body">
+                          <a href="#" class="btn btn-primary card-title" id="StartGame">Start Game</a>  
+                          <h5 class="card-title">Timer</h5>
+                          <p class="card-text" id="Timer"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+
+        <div class="card" id="HiddenResults">
+            <div class="card-header text-center">
+              Results
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">Correct Answers</h5>
+              <p class="card-text text-center" id="CorrectAnswerNum"></p>
+              <h5 class="card-title text-center">Wrong Answers</h5>
+              <p class="card-text text-center" id="WrongAnswerNum"></p>
+              <h5 class="card-title text-center">Unanswered</h5>
+              <p class="card-text text-center" id="UnansweredNum"></p>
+            </div>
+        </div>
+
+        <div class="HideAgain">
+
+        <div class="row  HiddenQuestions ">
+            <div class="card  CenterQuestions">
+                <div class="card-body">
+                  <h4>Who wrote the novel "The Da Vinci Code"?</h4>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q1" id="Q1a1" value="0">
+                    <label class="form-check-label" for="exampleRadios1">
+                      Leonardo Da Vinci
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q1" id="Q1a2" value="0">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Tom Hanks
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q1" id="Q1a3" value="1">
+                    <label class="form-check-label" for="exampleRadios1">
+                      Dan Brown
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q1" id="Q1a4" value="0">
+                    <label class="form-check-label" for="exampleRadios2">
+                      It was written by an anonymous author.
+                    </label>
+                  </div>
+                </div>
+              </div>       
+        </div>
+        
+
+        <div class="row HiddenQuestions HideAgain">
+            <div class="card  CenterQuestions">
+                <div class="card-body">
+                  <h4>What two U.S. States have their own timezones</h4>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q2" id="Q2a1" value="1">
+                    <label class="form-check-label" for="exampleRadios1">
+                      Hawaii and Alaska
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q2" id="Q2a2" value="0">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Arkansas and Oregon
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q2" id="Q2a3" value="0">
+                    <label class="form-check-label" for="exampleRadios1">
+                      California and New York
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q2" id="Q2a4" value="0">
+                    <label class="form-check-label" for="exampleRadios2">
+                       Hawaii and Puerto Rico
+                    </label>
+                  </div>
+                </div>
+              </div>       
+        </div>
+
+
+        <div class="row HiddenQuestions HideAgain">
+            <div class="card  CenterQuestions">
+                <div class="card-body">
+                  <h4>Who directed the Oscar-winning movie Casablanca?</h4>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q3" id="Q3a1" value="0">
+                    <label class="form-check-label" for="exampleRadios1">
+                       Martin Scorsese
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q3" id="Q3a2" value="0">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Steven Spielberg
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q3" id="Q3a3" value="0">
+                    <label class="form-check-label" for="exampleRadios1">
+                      Humphrey Bogart
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q3" id="Q3a4" value="1">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Michael Curtiz
+                    </label>
+                  </div>
+                </div>
+              </div>       
+        </div>
+
+
+        <div class="row HiddenQuestions HideAgain">
+            <div class="card  CenterQuestions">
+                <div class="card-body">
+                  <h4>What decade were golf carts introduced in the US?</h4>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q4" id="Q4a1" value="0">
+                    <label class="form-check-label" for="exampleRadios1">
+                      1880s
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q4" id="Q4a2" value="0">
+                    <label class="form-check-label" for="exampleRadios2">
+                      1920s
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q4" id="Q4a3" value="1">
+                    <label class="form-check-label" for="exampleRadios1">
+                      1940s
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q4" id="Q4a4" value="0">
+                    <label class="form-check-label" for="exampleRadios2">
+                      1970s
+                    </label>
+                  </div>
+                </div>
+              </div>       
+        </div>
+
+
+        <div class="row HiddenQuestions HideAgain ">
+            <div class="card CenterQuestions">
+                <div class="card-body">
+                  <h4>In 1992, what city hosted the first World Series game ever played outside the US?</h4>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q5" id="Q5a1" value="0">
+                    <label class="form-check-label" for="exampleRadios1">
+                      Havana, Cuba
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q5" id="Q5a2" value="0">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Rome, Italy
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q5" id="Q5a3" value="0">
+                    <label class="form-check-label" for="exampleRadios1">
+                      Mexico city, Mexico
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Q5" id="Q5a4" value="1">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Toronto, Canada
+                    </label>
+                  </div>
+                </div>
+              </div>       
+        </div>
+    </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
